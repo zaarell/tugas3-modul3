@@ -75,6 +75,9 @@ public class Tugas2 {
      *  Saat ini nilainya tetap (Rp 50.000 + Rp 25.000).
      * @return jumlah potongan dalam rupiah
      */
+    private double hitungGajiBersih(double tunjangan, double bonus, double pajak) {
+        return getGajiPokok() + tunjangan + bonus - getPotongan() - pajak;
+    }
     private static double getPotongan() {
         double potongan = 50000 + 25000; // Magic numbers: 50000, 25000
         return potongan;
